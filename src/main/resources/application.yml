@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /
+
+# Do not change settings under 'management'. These are required for monitoring when deploy to Istio service mesh.
+management:
+  server:
+    # If separate management port, contextPath will NOT apply e.g., http://localhost:8081/actuator
+    port: 8082
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, info, prometheus
+
+spring:
+  application:
+    name: demoproject
+    version: 1.0.0
+  mvc:
+    throw-exception-if-no-handler-found: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+  data:
+    mongodb:
+      database: DemoProject
+      # mongo string on localhost
+      uri: mongodb://localhost:27017/DemoProject?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+      # mongo string on cosmosDB
+      # uri: mongodb://cosmos-aftersale-az-asse-dev-001:sM8CPhIUuKZ43Uu0ZA4YjI0IC0REHGq1ExYUXB5PCHvxaKrzx1z250Pw8k8ygHfNzAGSWuOG7rByaLVaoqSWXg%3D%3D@cosmos-aftersale-az-asse-dev-001.mongo.cosmos.azure.com:10255/?authSource=admin&replicaSet=globaldb&maxIdleTimeMS=120000&readPreference=primary&appname=%40cosmos-aftersale-az-asse-dev-001%40&retryWrites=false&ssl=true
