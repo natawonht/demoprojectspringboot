@@ -31,5 +31,3 @@ spring:
       database: DemoProject
       # mongo string on localhost
       uri: mongodb://localhost:27017/DemoProject?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
-      # mongo string on cosmosDB
-      # uri: mongodb://cosmos-aftersale-az-asse-dev-001:sM8CPhIUuKZ43Uu0ZA4YjI0IC0REHGq1ExYUXB5PCHvxaKrzx1z250Pw8k8ygHfNzAGSWuOG7rByaLVaoqSWXg%3D%3D@cosmos-aftersale-az-asse-dev-001.mongo.cosmos.azure.com:10255/?authSource=admin&replicaSet=globaldb&maxIdleTimeMS=120000&readPreference=primary&appname=%40cosmos-aftersale-az-asse-dev-001%40&retryWrites=false&ssl=true
